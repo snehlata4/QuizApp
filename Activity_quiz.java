@@ -75,6 +75,7 @@ public class Activity_quiz extends AppCompatActivity implements RewardedVideoAdL
         confirm=findViewById(R.id.button_confirm);
 
         right=findViewById(R.id.imageView1);
+
         wrong=findViewById(R.id.imageView2);
         timeup=findViewById(R.id.imageView3);
         textcolordefaultcd=countdown.getTextColors();
