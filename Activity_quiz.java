@@ -110,8 +110,6 @@ public class Activity_quiz extends AppCompatActivity implements RewardedVideoAdL
                         Toast.makeText(Activity_quiz.this,"Enter answer",Toast.LENGTH_SHORT).show();
                     }
 
-
-
                 }
                 else{
 
