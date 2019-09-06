@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <string name="r2">(18-5)²</string>
+    <string name="r1">10²</string>
+    <string name="r3">18²-22</string>
+    <string name="r4">22²</string>
+    <string name="r5">6³</string>
+    <string name="r6">4⁴</string>
+    <string name="r7">2⁵</string>
+
+</resources>
