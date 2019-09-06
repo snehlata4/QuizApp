@@ -120,9 +120,6 @@ public class Activity_quiz extends AppCompatActivity implements RewardedVideoAdL
             }
         });
 
-
-
-
     }
 
     private void loadRewardedVideoAd() {
@@ -140,6 +137,7 @@ public class Activity_quiz extends AppCompatActivity implements RewardedVideoAdL
             currentquestion=questionList.get(questioncounter);
 
             textViewquestion.setText(currentquestion.getQuestion());
+
             questioncounter++;
             questioncount.setText("Question: " + questioncounter + "/" + questioncounttotal);
             answered=false;
@@ -211,7 +209,7 @@ public class Activity_quiz extends AppCompatActivity implements RewardedVideoAdL
         int seconds=(int)(timeleftinmillis/1000)%60;
         String timeformatted=String.format(Locale.getDefault(),"%02d:%02d",minutes,seconds);
         countdown.setText(timeformatted);
-        if(timeleftinmillis<1000)
+        if(timeleftinmillis<10000)
         {
             countdown.setTextColor(Color.RED);
         }

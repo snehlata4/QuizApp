@@ -507,30 +507,30 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(QuizContract.QuestionTable.TABLE_NAME,null,cv);
 
     }
-    public List<question> getallquestions()
-    {
-        List<question> questionList=new ArrayList<>();
-        db=getReadableDatabase();
-        String[] selectionArgs = new String[]{};
-        Cursor c = db.rawQuery("SELECT * FROM " + QuizContract.QuestionTable.TABLE_NAME, null);
-       if(c.moveToFirst()){
-           do{
-               question question=new question();
-               question.setQuestion(c.getString(c.getColumnIndex(QuizContract.QuestionTable.COLUMN_QUESTION)));
-               question.setAnswer(c.getString(c.getColumnIndex(QuizContract.QuestionTable.COLUMN_ANSWER)));
-               question.setDifficulty(c.getString(c.getColumnIndex(QuizContract.QuestionTable.COLUMN_DIFFICULTY)));
-
-
-               questionList.add(question);
-           }
-           while (c.moveToNext());
-
-
-
-       }
-c.close();
-       return questionList;
-    }
+//    public List<question> getallquestions()
+//    {
+//        List<question> questionList=new ArrayList<>();
+//        db=getReadableDatabase();
+//        String[] selectionArgs = new String[]{};
+//        Cursor c = db.rawQuery("SELECT * FROM " + QuizContract.QuestionTable.TABLE_NAME, null);
+//       if(c.moveToFirst()){
+//           do{
+//               question question=new question();
+//               question.setQuestion(c.getString(c.getColumnIndex(QuizContract.QuestionTable.COLUMN_QUESTION)));
+//               question.setAnswer(c.getString(c.getColumnIndex(QuizContract.QuestionTable.COLUMN_ANSWER)));
+//               question.setDifficulty(c.getString(c.getColumnIndex(QuizContract.QuestionTable.COLUMN_DIFFICULTY)));
+//
+//
+//               questionList.add(question);
+//           }
+//           while (c.moveToNext());
+//
+//
+//
+//       }
+//c.close();
+//       return questionList;
+//    }
     public List<question> getquestions(String difficulty)
     {
         List<question> questionList=new ArrayList<>();
